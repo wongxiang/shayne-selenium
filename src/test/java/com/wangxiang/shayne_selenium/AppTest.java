@@ -1,5 +1,9 @@
 package com.wangxiang.shayne_selenium;
 
+import org.openqa.selenium.WebDriver;
+
+import com.wangxiang.shayne_selenium.webdriver.InitWebDriver;
+
 import junit.framework.Test;
 import junit.framework.TestCase;
 import junit.framework.TestSuite;
@@ -33,6 +37,7 @@ public class AppTest
      */
     public void testApp()
     {
-        assertTrue( true );
+        WebDriver driver=InitWebDriver.init("ie");
+        driver.get("http://www.baidu.com");
     }
 }
